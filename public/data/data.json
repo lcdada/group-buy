@@ -1,0 +1,105 @@
+{
+    "list" :[
+        {
+          "name": "场景",
+          "value": 1,
+          "isShow": false,
+          "child":[
+              {
+                "name":"生日",
+                "multiple": true,
+                "list":[
+                    { "name": "丽人节", "value": 1, "selected": false },
+                    { "name": "儿童节", "value": 2, "selected": false },
+                    { "name": "植树节", "value": 3, "selected": false },
+                    { "name": "父亲节", "value": 4, "selected": false },
+                    { "name": "母亲节", "value": 5, "selected": false },
+                    { "name": "中秋节", "value": 6, "selected": false }
+                ]
+
+              },
+              {
+                "name":"节日",
+                "multiple": true,
+                "list":[
+                    { "name": "丽人节", "value": 1, "selected": false },
+                    { "name": "儿童节", "value": 2, "selected": false },
+                    { "name": "植树节", "value": 3, "selected": false },
+                    { "name": "父亲节", "value": 4, "selected": false },
+                    { "name": "母亲节", "value": 5, "selected": false },
+                    { "name": "中秋节", "value": 6, "selected": false }
+                ]
+
+              },
+              {
+                "name":"节日",
+                "multiple": true,
+                "list":[
+                    { "name": "丽人节", "value": 1, "selected": false },
+                    { "name": "儿童节", "value": 2, "selected": false },
+                    { "name": "植树节", "value": 3, "selected": false },
+                    { "name": "父亲节", "value": 4, "selected": false },
+                    { "name": "母亲节", "value": 5, "selected": false },
+                    { "name": "中秋节", "value": 6, "selected": false }
+                ]
+
+              },
+              {
+                "name":"节日",
+                "multiple": true,
+                "list":[
+                    { "name": "丽人节", "value": 1, "selected": false },
+                    { "name": "儿童节", "value": 2, "selected": false },
+                    { "name": "植树节", "value": 3, "selected": false },
+                    { "name": "父亲节", "value": 4, "selected": false },
+                    { "name": "母亲节", "value": 5, "selected": false },
+                    { "name": "中秋节", "value": 6, "selected": false }
+                ]
+
+              }
+             
+          ]
+        },
+        {
+            "name": "价位",
+            "value": 2,
+            "isShow": false,
+            "child": [
+                {
+                    "name":"价位",
+                    "multiple": false,
+                    "list":[
+                        { "name": "不限", "value": 1, "selected": false },
+                        { "name": "1500元以下", "value": 2, "selected": false },
+                        { "name": "1500-2500元", "value": 3, "selected": false },
+                        { "name": "2500-4000元", "value": 4, "selected": false },
+                        { "name": "4000-6000元", "value": 5, "selected": false },
+                        { "name": "6000-10000元", "value": 6, "selected": false }
+                    ]
+                }
+               
+            ]
+        },
+        {
+            "name": "对象",
+            "value": 3,
+            "isShow": false,
+            "child":[
+                {
+                  "name":"对象",
+                  "multiple": true,
+                  "list":[
+                      { "name": "丽人节", "value": 1, "selected": false },
+                      { "name": "儿童节", "value": 2, "selected": false },
+                      { "name": "植树节", "value": 3, "selected": false },
+                      { "name": "父亲节", "value": 4, "selected": false },
+                      { "name": "母亲节", "value": 5, "selected": false },
+                      { "name": "中秋节", "value": 6, "selected": false }
+                  ]
+  
+                }
+               
+            ]
+          }
+      ]
+}
