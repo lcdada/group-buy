@@ -6,85 +6,13 @@
         </div>
         <div class="list">
             <ul class="list_ul">
-                <li class="goods_item">
+                <li class="goods_item" v-for="item in homelist" :key="item.index">
                     <div class="box_1"></div>
                     <div class="box_2"></div>
-                    <img src="../assets/img/1.png" alt="" class="item_img">
+                    <img :src="item.src" alt="" class="item_img">
                     <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/2.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/3.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                 <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/1.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/2.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/3.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                 <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/1.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/2.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
-                    </div>
-                </li>
-                <li class="goods_item">
-                    <div class="box_1"></div>
-                    <div class="box_2"></div>
-                    <img src="../assets/img/3.png" alt="" class="item_img">
-                    <div class="goods_item_text">
-                        <p class="item_text_1">2020丽人册-悦动</p>
-                        <p class="item_text_2">138档</p>
+                        <p class="item_text_1">{{item.title}}</p>
+                        <p class="item_text_2">{{item.price}}</p>
                     </div>
                 </li>
             </ul>
@@ -93,15 +21,37 @@
 </template>
 
 <script>
+    import Qs from 'qs'
     export default {
-        
+         props:{
+            homelist:Array,
+        },
         data () {
             return {
-
+                homeList:[]
             }
         },
         components: {
 
+        },
+        created () {
+            // this.getHomelist()  
+        },
+        methods: {
+            // getHomelist(){
+            //     let data = Qs.stringify({"cid":"54"});
+            //     this.$http.post("/api/Api/GroupPurchase/getSingleGroupPurchase",
+            //     data,
+            //     {headers:{'Content-Type':'application/x-www-form-urlencoded'}})
+            //     .then((res) => {
+            //         console.log(res.data.data);
+            //         if(res.data.data.status == 101){
+            //             this.homeList = res.data.data.goods_list
+            //         }
+            //     }).catch((err) => {
+            //         console.log(err);
+            //     })
+            // }
         }
     }
 </script>

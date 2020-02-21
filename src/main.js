@@ -5,6 +5,7 @@ import 'amfe-flexible';
 import "./assets/css/global.css"
 import axios from 'axios'
 
+
 Vue.config.productionTip = false;
 Vue.prototype.$http=axios
 

@@ -8,8 +8,8 @@
             </div>
             <div class="Contacts">
                 <P class="company_name">北京礼品实业贸易有限公司</P>
-                <P class="user_name">联系人：<span> 张经理</span></P>
-                <P class="tel_number">联系方式：<span class="telephone">17611134126</span></P>
+                <P class="user_name">联系人：<span>{{Info.concat}}</span></P>
+                <P class="tel_number">联系方式：<span class="telephone">{{Info.mobile}}</span></P>
             </div>
         </div>
         <div class="call_block">
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+    import Qs from 'qs'
     export default {
         name: "Contact",
         data () {
@@ -29,10 +30,30 @@
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100%"
                 },
+                Info:[]
             }
         },
         components: {
 
+        },
+        created () {
+            this.getContactsInfo()  
+        },
+        methods: {
+            getContactsInfo(){
+                let data = Qs.stringify({"cid":"54"});
+                this.$http.post("/api/Api/GroupPurchase/getContactUs",
+                data,
+                {headers:{'Content-Type':'application/x-www-form-urlencoded'}})
+                .then((res) => {
+                    console.log(res.data);
+                    if(res.data.status == 101){
+                        this.Info = res.data.data
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                })
+            }
         }
     }
 </script>
